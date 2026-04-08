@@ -20,7 +20,9 @@ This is an 80% feature complete solution. For this to hit 100%:
 
 - Some obfuscation and request anonymization.
 
-- Bun is the recommended JavaScript environment. NPM and Node have becone severry compromised via a rogue state actor's "supply chain" attack against the package repository.
+- The Salesforce agent implementation needs to be built in an org that has real-world, moderately complex product configurations. In the interest of time, this is the remaining big chunk of work. The overview diagram details how everything fits together, including any code that is having "hands waved over it for the moment."
+
+- Bun is the recommended JavaScript environment. NPM and Node have becone severely compromised via a rogue state actor's "supply chain" attack against the package repository.
 
 - Everything is subject to massive changes. One need only look at the last year for evidence.
 
