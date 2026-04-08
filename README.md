@@ -14,7 +14,9 @@ An MCP-driven CPQ solution for the Salesfoce platform.
 
 ## Of Note
 
-This is an 80% feature complete solution. For this to hit 100%:
+This is a theroetical exercise of a solution that works in a generic sense, and would need to be modified in order o better fit an org in the wild.
+
+To that end, this is also an 80% feature complete architecture. For this to hit 100%:
 
 - Unit tests need to be built to support both sympathetic and adversarial scenarios. 
 
