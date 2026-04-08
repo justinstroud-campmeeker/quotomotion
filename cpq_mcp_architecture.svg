@@ -1,0 +1,282 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 800" font-family="'Segoe UI', Helvetica, Arial, sans-serif">
+
+  <defs>
+    <!-- Arrowhead: tip at refX, points right, rotates with line via orient="auto" -->
+    <marker id="ah-gray" markerWidth="8" markerHeight="7" refX="7" refY="3.5" orient="auto">
+      <polygon points="0 0, 8 3.5, 0 7" fill="#6B7280"/>
+    </marker>
+    <marker id="ah-gray-rev" markerWidth="8" markerHeight="7" refX="1" refY="3.5" orient="auto">
+      <polygon points="8 0, 0 3.5, 8 7" fill="#6B7280"/>
+    </marker>
+    <marker id="ah-green" markerWidth="7" markerHeight="6" refX="6" refY="3" orient="auto">
+      <polygon points="0 0, 7 3, 0 6" fill="#16A34A"/>
+    </marker>
+    <marker id="ah-amber" markerWidth="7" markerHeight="6" refX="6" refY="3" orient="auto">
+      <polygon points="0 0, 7 3, 0 6" fill="#CA8A04"/>
+    </marker>
+    <marker id="ah-blue-sm" markerWidth="7" markerHeight="6" refX="6" refY="3" orient="auto">
+      <polygon points="0 0, 7 3, 0 6" fill="#3B82F6"/>
+    </marker>
+  </defs>
+
+  <!-- ═══ BACKGROUND ════════════════════════════════════════════════════ -->
+  <rect width="1000" height="800" fill="#F8F9FB"/>
+
+  <!-- ═══ LAYER 1: MCP CLIENT ══════════════════════════════════════════ -->
+  <rect x="30" y="16" width="940" height="90" rx="10"
+        fill="#DBEAFE" stroke="#3B82F6" stroke-width="2"/>
+
+  <text x="500" y="40" text-anchor="middle"
+        font-size="11" font-weight="700" fill="#1E40AF" letter-spacing="1.5">MCP CLIENT LAYER</text>
+
+  <!-- Pill: AgentForce -->
+  <rect x="120" y="52" width="195" height="38" rx="19"
+        fill="#3B82F6" fill-opacity="0.15" stroke="#3B82F6" stroke-width="1.5"/>
+  <text x="217" y="76" text-anchor="middle"
+        font-size="12" font-weight="600" fill="#1E40AF">AgentForce Agent</text>
+
+  <!-- Pill: Claude -->
+  <rect x="402" y="52" width="195" height="38" rx="19"
+        fill="#3B82F6" fill-opacity="0.15" stroke="#3B82F6" stroke-width="1.5"/>
+  <text x="499" y="76" text-anchor="middle"
+        font-size="12" font-weight="600" fill="#1E40AF">Claude</text>
+
+  <!-- Pill: Custom LLM -->
+  <rect x="684" y="52" width="195" height="38" rx="19"
+        fill="#3B82F6" fill-opacity="0.15" stroke="#3B82F6" stroke-width="1.5"/>
+  <text x="781" y="76" text-anchor="middle"
+        font-size="12" font-weight="600" fill="#1E40AF">Custom LLM Client</text>
+
+
+  <!-- ─── ARROW 1: Client ↕ Server ─────────────────────────────────── -->
+  <!-- Down arrow -->
+  <line x1="497" y1="107" x2="497" y2="149"
+        stroke="#6B7280" stroke-width="1.5" stroke-dasharray="4,3"
+        marker-end="url(#ah-gray)"/>
+  <!-- Up arrow -->
+  <line x1="503" y1="149" x2="503" y2="107"
+        stroke="#6B7280" stroke-width="1.5" stroke-dasharray="4,3"
+        marker-end="url(#ah-gray)"/>
+  <!-- Label -->
+  <rect x="340" y="119" width="320" height="22" rx="5"
+        fill="#F3F4F6" stroke="#E5E7EB" stroke-width="1"/>
+  <text x="500" y="134" text-anchor="middle"
+        font-size="10" fill="#374151">MCP Protocol · JSON-RPC over stdio / SSE</text>
+
+
+  <!-- ═══ LAYER 2: CPQ MCP SERVER ══════════════════════════════════════ -->
+  <rect x="30" y="152" width="940" height="328" rx="10"
+        fill="#F5F3FF" stroke="#7C3AED" stroke-width="2"/>
+
+  <text x="500" y="174" text-anchor="middle"
+        font-size="11" font-weight="700" fill="#4C1D95" letter-spacing="1">CPQ MCP SERVER  ·  Bun / TypeScript</text>
+
+
+  <!-- ─── Box: Product Tools ─────────────────────────────────────────── -->
+  <rect x="48" y="184" width="285" height="212" rx="8"
+        fill="#F0FDF4" stroke="#16A34A" stroke-width="1.5"/>
+
+  <!-- Header bar effect: colored rounded rect + fill to square bottom -->
+  <rect x="48" y="184" width="285" height="30" rx="8"
+        fill="#BBF7D0"/>
+  <rect x="48" y="198" width="285" height="16"
+        fill="#BBF7D0"/>
+
+  <text x="190" y="204" text-anchor="middle"
+        font-size="11" font-weight="700" fill="#14532D" letter-spacing="0.5">PRODUCT TOOLS</text>
+
+  <text x="68" y="232" font-size="11" fill="#166534">▸  get_product_catalog</text>
+  <text x="68" y="252" font-size="11" fill="#166534">▸  configure_product</text>
+  <text x="68" y="272" font-size="11" fill="#166534">▸  validate_configuration</text>
+  <text x="68" y="292" font-size="11" fill="#166534">▸  get_bundle_options</text>
+
+  <line x1="65" y1="303" x2="315" y2="303" stroke="#BBF7D0" stroke-width="1"/>
+
+  <text x="190" y="320" text-anchor="middle" font-size="10" fill="#15803D" font-style="italic">Product catalog · config rules</text>
+  <text x="190" y="336" text-anchor="middle" font-size="10" fill="#15803D" font-style="italic">Bundle evaluation</text>
+  <text x="190" y="354" text-anchor="middle" font-size="10" fill="#4B5563">Reads: Product2, PricebookEntry</text>
+  <text x="190" y="370" text-anchor="middle" font-size="10" fill="#4B5563">Rules: CPQ_Bundle_Rule__mdt</text>
+
+
+  <!-- ─── Box: Pricing Engine ───────────────────────────────────────── -->
+  <rect x="357" y="184" width="285" height="212" rx="8"
+        fill="#FFFBEB" stroke="#CA8A04" stroke-width="1.5"/>
+
+  <rect x="357" y="184" width="285" height="30" rx="8"
+        fill="#FDE68A"/>
+  <rect x="357" y="198" width="285" height="16"
+        fill="#FDE68A"/>
+
+  <text x="499" y="204" text-anchor="middle"
+        font-size="11" font-weight="700" fill="#713F12" letter-spacing="0.5">PRICING ENGINE</text>
+
+  <text x="377" y="232" font-size="11" fill="#92400E">▸  calculate_price</text>
+  <text x="377" y="252" font-size="11" fill="#92400E">▸  apply_discounts</text>
+  <text x="377" y="272" font-size="11" fill="#92400E">▸  evaluate_promo_eligibility</text>
+  <text x="377" y="292" font-size="11" fill="#92400E">▸  get_approval_requirements</text>
+
+  <line x1="374" y1="303" x2="624" y2="303" stroke="#FDE68A" stroke-width="1"/>
+
+  <text x="499" y="320" text-anchor="middle" font-size="10" fill="#B45309" font-style="italic">Volume · term · promo discounts</text>
+  <text x="499" y="336" text-anchor="middle" font-size="10" fill="#B45309" font-style="italic">Full pricing trace / audit log</text>
+  <text x="499" y="354" text-anchor="middle" font-size="10" fill="#4B5563">Rules: CPQ_Discount_Tier__mdt</text>
+  <text x="499" y="370" text-anchor="middle" font-size="10" fill="#4B5563">Approvals: CPQ_Approval_Threshold__mdt</text>
+
+
+  <!-- ─── Box: Quote Tools ──────────────────────────────────────────── -->
+  <rect x="666" y="184" width="285" height="212" rx="8"
+        fill="#EFF6FF" stroke="#3B82F6" stroke-width="1.5"/>
+
+  <rect x="666" y="184" width="285" height="30" rx="8"
+        fill="#BFDBFE"/>
+  <rect x="666" y="198" width="285" height="16"
+        fill="#BFDBFE"/>
+
+  <text x="808" y="204" text-anchor="middle"
+        font-size="11" font-weight="700" fill="#1E3A8A" letter-spacing="0.5">QUOTE TOOLS</text>
+
+  <text x="686" y="232" font-size="11" fill="#1D4ED8">▸  create_quote</text>
+  <text x="686" y="252" font-size="11" fill="#1D4ED8">▸  get_quote</text>
+  <text x="686" y="272" font-size="11" fill="#1D4ED8">▸  submit_for_approval</text>
+  <text x="686" y="292" font-size="11" fill="#1D4ED8">▸  generate_quote_document</text>
+
+  <line x1="683" y1="303" x2="933" y2="303" stroke="#BFDBFE" stroke-width="1"/>
+
+  <text x="808" y="320" text-anchor="middle" font-size="10" fill="#1E40AF" font-style="italic">Quote lifecycle management</text>
+  <text x="808" y="336" text-anchor="middle" font-size="10" fill="#1E40AF" font-style="italic">Approval chain integration</text>
+  <text x="808" y="354" text-anchor="middle" font-size="10" fill="#4B5563">Writes: Quote, QuoteLineItem</text>
+  <text x="808" y="370" text-anchor="middle" font-size="10" fill="#4B5563">Submits: SF Approval Process</text>
+
+
+  <!-- ─── Arrows: tool boxes → adapter ─────────────────────────────── -->
+  <line x1="190" y1="398" x2="190" y2="411"
+        stroke="#16A34A" stroke-width="1.5" marker-end="url(#ah-green)"/>
+  <line x1="499" y1="398" x2="499" y2="411"
+        stroke="#CA8A04" stroke-width="1.5" marker-end="url(#ah-amber)"/>
+  <line x1="808" y1="398" x2="808" y2="411"
+        stroke="#3B82F6" stroke-width="1.5" marker-end="url(#ah-blue-sm)"/>
+
+
+  <!-- ─── Salesforce Adapter ─────────────────────────────────────────── -->
+  <rect x="48" y="413" width="904" height="54" rx="6"
+        fill="#F1F5F9" stroke="#94A3B8" stroke-width="1.5"/>
+
+  <text x="500" y="435" text-anchor="middle"
+        font-size="11" font-weight="700" fill="#1E293B" letter-spacing="0.5">SALESFORCE ADAPTER</text>
+  <text x="500" y="454" text-anchor="middle"
+        font-size="10.5" fill="#475569">jsforce Connection Pool  ·  REST API  ·  Bulk API  ·  Custom Metadata (CMDT) Queries</text>
+
+
+  <!-- ─── ARROW 2: Server ↕ Salesforce Org ────────────────────────── -->
+  <!-- Down arrow -->
+  <line x1="497" y1="468" x2="497" y2="512"
+        stroke="#6B7280" stroke-width="1.5" stroke-dasharray="4,3"
+        marker-end="url(#ah-gray)"/>
+  <!-- Up arrow -->
+  <line x1="503" y1="512" x2="503" y2="468"
+        stroke="#6B7280" stroke-width="1.5" stroke-dasharray="4,3"
+        marker-end="url(#ah-gray)"/>
+  <!-- Label -->
+  <rect x="295" y="480" width="410" height="22" rx="5"
+        fill="#F3F4F6" stroke="#E5E7EB" stroke-width="1"/>
+  <text x="500" y="495" text-anchor="middle"
+        font-size="10" fill="#374151">REST API · Bulk API · CMDT Read (zero DML cost)</text>
+
+
+  <!-- ═══ LAYER 3: SALESFORCE ORG ══════════════════════════════════════ -->
+  <rect x="30" y="516" width="940" height="262" rx="10"
+        fill="#ECFDF5" stroke="#10B981" stroke-width="2"/>
+
+  <text x="500" y="538" text-anchor="middle"
+        font-size="11" font-weight="700" fill="#065F46" letter-spacing="1">SALESFORCE ORG</text>
+
+
+  <!-- ─── Sub-box: Product Catalog ─────────────────────────────────── -->
+  <rect x="48" y="548" width="210" height="212" rx="6"
+        fill="#FFFFFF" stroke="#6EE7B7" stroke-width="1.5"/>
+  <rect x="48" y="548" width="210" height="28" rx="6" fill="#A7F3D0"/>
+  <rect x="48" y="562" width="210" height="14" fill="#A7F3D0"/>
+  <text x="153" y="566" text-anchor="middle"
+        font-size="10" font-weight="700" fill="#064E3B" letter-spacing="0.3">PRODUCT CATALOG</text>
+
+  <text x="153" y="594" text-anchor="middle" font-size="11" fill="#065F46">Product2</text>
+  <text x="153" y="613" text-anchor="middle" font-size="11" fill="#065F46">PricebookEntry</text>
+  <text x="153" y="632" text-anchor="middle" font-size="11" fill="#065F46">Pricebook2</text>
+  <line x1="65" y1="644" x2="240" y2="644" stroke="#D1FAE5" stroke-width="1"/>
+  <text x="153" y="661" text-anchor="middle" font-size="10" fill="#6B7280">Standard objects only.</text>
+  <text x="153" y="677" text-anchor="middle" font-size="10" fill="#6B7280">No managed package</text>
+  <text x="153" y="693" text-anchor="middle" font-size="10" fill="#6B7280">objects required.</text>
+  <text x="153" y="709" text-anchor="middle" font-size="10" fill="#6B7280">Portable. Org-agnostic.</text>
+  <line x1="65" y1="720" x2="240" y2="720" stroke="#D1FAE5" stroke-width="1"/>
+  <text x="153" y="736" text-anchor="middle" font-size="10" fill="#10B981" font-style="italic">← Read by Product Tools</text>
+  <text x="153" y="752" text-anchor="middle" font-size="10" fill="#10B981" font-style="italic">← Priced by Pricing Engine</text>
+
+
+  <!-- ─── Sub-box: Custom Metadata ─────────────────────────────────── -->
+  <rect x="278" y="548" width="210" height="212" rx="6"
+        fill="#FFFBEB" stroke="#FCD34D" stroke-width="1.5"/>
+  <rect x="278" y="548" width="210" height="28" rx="6" fill="#FEF3C7"/>
+  <rect x="278" y="562" width="210" height="14" fill="#FEF3C7"/>
+  <text x="383" y="566" text-anchor="middle"
+        font-size="10" font-weight="700" fill="#78350F" letter-spacing="0.3">CUSTOM METADATA</text>
+
+  <text x="383" y="594" text-anchor="middle" font-size="10" fill="#92400E">CPQ_Discount_Tier__mdt</text>
+  <text x="383" y="613" text-anchor="middle" font-size="10" fill="#92400E">CPQ_Bundle_Rule__mdt</text>
+  <text x="383" y="632" text-anchor="middle" font-size="10" fill="#92400E">CPQ_Approval_Threshold__mdt</text>
+  <text x="383" y="651" text-anchor="middle" font-size="10" fill="#92400E">CPQ_Promo__mdt</text>
+  <line x1="295" y1="663" x2="470" y2="663" stroke="#FDE68A" stroke-width="1"/>
+  <text x="383" y="680" text-anchor="middle" font-size="10" fill="#6B7280">Version-controlled (SFDX).</text>
+  <text x="383" y="696" text-anchor="middle" font-size="10" fill="#6B7280">Zero DML overhead.</text>
+  <text x="383" y="712" text-anchor="middle" font-size="10" fill="#6B7280">Admin-editable.</text>
+  <line x1="295" y1="723" x2="470" y2="723" stroke="#FDE68A" stroke-width="1"/>
+  <text x="383" y="740" text-anchor="middle" font-size="10" fill="#B45309" font-style="italic">← Replaces CPQ Price Rules</text>
+  <text x="383" y="756" text-anchor="middle" font-size="10" fill="#B45309" font-style="italic">← Replaces CPQ Product Rules</text>
+
+
+  <!-- ─── Sub-box: Quote Objects ───────────────────────────────────── -->
+  <rect x="508" y="548" width="210" height="212" rx="6"
+        fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1.5"/>
+  <rect x="508" y="548" width="210" height="28" rx="6" fill="#BFDBFE"/>
+  <rect x="508" y="562" width="210" height="14" fill="#BFDBFE"/>
+  <text x="613" y="566" text-anchor="middle"
+        font-size="10" font-weight="700" fill="#1E3A8A" letter-spacing="0.3">QUOTE OBJECTS</text>
+
+  <text x="613" y="594" text-anchor="middle" font-size="11" fill="#1D4ED8">Quote</text>
+  <text x="613" y="613" text-anchor="middle" font-size="11" fill="#1D4ED8">QuoteLineItem</text>
+  <line x1="525" y1="625" x2="700" y2="625" stroke="#BFDBFE" stroke-width="1"/>
+  <text x="613" y="643" text-anchor="middle" font-size="10" fill="#6B7280">Standard objects only.</text>
+  <text x="613" y="659" text-anchor="middle" font-size="10" fill="#6B7280">Net price written after</text>
+  <text x="613" y="675" text-anchor="middle" font-size="10" fill="#6B7280">pricing engine run.</text>
+  <text x="613" y="691" text-anchor="middle" font-size="10" fill="#6B7280">Full discount audit trail</text>
+  <text x="613" y="707" text-anchor="middle" font-size="10" fill="#6B7280">preserved per line item.</text>
+  <line x1="525" y1="718" x2="700" y2="718" stroke="#BFDBFE" stroke-width="1"/>
+  <text x="613" y="736" text-anchor="middle" font-size="10" fill="#2563EB" font-style="italic">← Written by Quote Tools</text>
+  <text x="613" y="752" text-anchor="middle" font-size="10" fill="#2563EB" font-style="italic">← Approval via Process API</text>
+
+
+  <!-- ─── Sub-box: Opportunity ─────────────────────────────────────── -->
+  <rect x="738" y="548" width="210" height="212" rx="6"
+        fill="#FDF4FF" stroke="#E9D5FF" stroke-width="1.5"/>
+  <rect x="738" y="548" width="210" height="28" rx="6" fill="#E9D5FF"/>
+  <rect x="738" y="562" width="210" height="14" fill="#E9D5FF"/>
+  <text x="843" y="566" text-anchor="middle"
+        font-size="10" font-weight="700" fill="#4C1D95" letter-spacing="0.3">OPPORTUNITY</text>
+
+  <text x="843" y="594" text-anchor="middle" font-size="11" fill="#6D28D9">Opportunity</text>
+  <text x="843" y="613" text-anchor="middle" font-size="11" fill="#6D28D9">OpportunityLineItem</text>
+  <line x1="755" y1="625" x2="930" y2="625" stroke="#E9D5FF" stroke-width="1"/>
+  <text x="843" y="643" text-anchor="middle" font-size="10" fill="#6B7280">Quote syncs back on</text>
+  <text x="843" y="659" text-anchor="middle" font-size="10" fill="#6B7280">primary mark.</text>
+  <text x="843" y="675" text-anchor="middle" font-size="10" fill="#6B7280">Standard SF sync</text>
+  <text x="843" y="691" text-anchor="middle" font-size="10" fill="#6B7280">behavior — no custom</text>
+  <text x="843" y="707" text-anchor="middle" font-size="10" fill="#6B7280">trigger required.</text>
+  <line x1="755" y1="718" x2="930" y2="718" stroke="#E9D5FF" stroke-width="1"/>
+  <text x="843" y="736" text-anchor="middle" font-size="10" fill="#7C3AED" font-style="italic">← Synced from Quote</text>
+  <text x="843" y="752" text-anchor="middle" font-size="10" fill="#7C3AED" font-style="italic">on primary flag</text>
+
+
+  <!-- ═══ FOOTER ══════════════════════════════════════════════════════ -->
+  <text x="500" y="790" text-anchor="middle"
+        font-size="10" fill="#9CA3AF">CPQ MCP Server for Salesforce  ·  Justin Stroud  ·  2026</text>
+
+</svg>
