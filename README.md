@@ -1,6 +1,6 @@
 ## Quotomotion
 
-An MCP-driven CPQ solution for the Salesfoce platform. I
+An MCP-driven CPQ solution for the Salesfoce platform. 
 
 
 ## Directory
