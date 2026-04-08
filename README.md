@@ -26,7 +26,7 @@ This is an 80% feature complete solution. For this to hit 100%:
 
 - Everything is subject to massive changes. One need only look at the last year for evidence.
 
-- 2025 was supposed to be the 'Year of the Agent' and instead, MCP has become a major tool in the effort ito integra
+- 2025 was supposed to be the 'Year of the Agent' and instead, MCP has become a major tool in the effort ito integrate agents with "actions", where "actions" is defined as tool usage and not necessarily as defined by the Salesforce ecosystem (where Actions are done by agents on topics, for example.)
 
 - One major design flaw in the MCP spec is that it only supports two communication channels: STDIO and SSE (server-side events.)  Server Side Events function like unidirection WebSockets (they stream from the sr)
 
