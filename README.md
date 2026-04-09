@@ -10,10 +10,12 @@ Since this is currently only working in stdio, the only thing that has to happen
 
 For reference, here is a working CPQ conversation initialed:
 
-![alt text](image.png)
+<img width="820" height="682" alt="image" src="https://github.com/user-attachments/assets/c3e3719f-293c-478a-a29a-2be79b1025cd" />
+
 
 And look, we hit our first limitation (or opportunity, as it were):
-![alt text](image-1.png)
+<img width="739" height="466" alt="image" src="https://github.com/user-attachments/assets/ba6c9eaf-1665-4468-8c7d-ef8967c0720d" />
+
 
 ## Coming Soon
 
