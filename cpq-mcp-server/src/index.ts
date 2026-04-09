@@ -21,6 +21,7 @@
 
 import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js';
+import { z } from 'zod';
 
 import {
   GetProductCatalogSchema,
@@ -155,9 +156,9 @@ server.tool(
   'Return eligible product bundles for a given seed product and customer context. ' +
   'Uses CPQ_Bundle_Rule__mdt to determine valid combinations.',
   {
-    productId: { type: 'string' as const, description: 'Seed product ID' },
-    opportunityId: { type: 'string' as const, description: 'Opportunity for customer context' },
-    customerSegment: { type: 'string' as const, description: 'e.g., Enterprise, SMB, Public Sector' },
+    productId: z.string().describe('Seed product ID'),
+    opportunityId: z.string().describe('Opportunity for customer context'),
+    customerSegment: z.string().describe('e.g., Enterprise, SMB, Public Sector'),
   },
   async (input) => ({
     content: [{
@@ -178,7 +179,7 @@ server.tool(
   'get_approval_requirements',
   'Check what approvals are required for a quote before submission.',
   {
-    quoteId: { type: 'string' as const, description: 'Quote ID to evaluate' },
+    quoteId: z.string().describe('Quote ID to evaluate'),
   },
   async (input) => ({
     content: [{

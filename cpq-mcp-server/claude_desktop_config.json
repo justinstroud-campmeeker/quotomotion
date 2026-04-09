@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "cpq-mcp-server": {
+      "command": "bun",
+      "args": ["src/index.ts"],
+      "cwd": "C:\\Users\\justi\\Documents\\Claude\\Projects\\quotomotion\\cpq-mcp-server",
+      "env": {
+        "SF_LOGIN_URL": "https://login.salesforce.com",
+        "SF_USERNAME": "your_salesforce_username",
+        "SF_PASSWORD": "your_salesforce_password",
+        "SF_SECURITY_TOKEN": "your_security_token"
+      }
+    }
+  }
+}
