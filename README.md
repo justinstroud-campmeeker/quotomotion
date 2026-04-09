@@ -16,6 +16,9 @@ For reference, here is a working CPQ conversation initialed:
 And look, we hit our first limitation (or opportunity, as it were):
 <img width="739" height="466" alt="image" src="https://github.com/user-attachments/assets/ba6c9eaf-1665-4468-8c7d-ef8967c0720d" />
 
+So if we have an opp ID, we can really get going...
+<img width="747" height="615" alt="image" src="https://github.com/user-attachments/assets/72741ff3-9eb9-4ae9-9a4a-e2ad82e21c2b" />
+
 
 ## Coming Soon
 
