@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BundleName__c</fullName>
+    <label>Bundle Name</label>
+    <length>100</length>
+    <type>Text</type>
+    <unique>false</unique>
+    <description>Display name returned to the agent when listing available bundles.</description>
+</CustomField>

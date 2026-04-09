@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Enterprise Suite</label>
+    <protected>false</protected>
+    <values>
+        <field>BundleName__c</field>
+        <value xsi:type="xsd:string">Enterprise Suite</value>
+    </values>
+    <values>
+        <field>SeedProductFamily__c</field>
+        <value xsi:type="xsd:string">Software</value>
+    </values>
+    <values>
+        <field>IncludedProductCodes__c</field>
+        <value xsi:type="xsd:string">PROD-A,PROD-B,SUPPORT-ENT</value>
+    </values>
+    <values>
+        <field>BundleDiscount__c</field>
+        <value xsi:type="xsd:double">15</value>
+    </values>
+    <values>
+        <field>CustomerSegment__c</field>
+        <value xsi:type="xsd:string">Enterprise</value>
+    </values>
+    <values>
+        <field>Priority__c</field>
+        <value xsi:type="xsd:double">10</value>
+    </values>
+    <values>
+        <field>IsActive__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+</CustomMetadata>

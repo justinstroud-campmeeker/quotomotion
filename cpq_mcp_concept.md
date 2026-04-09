@@ -6,7 +6,7 @@
 
 ---
 
-## The Problem with Salesforce CPQ Today`
+## The Problem with Salesforce CPQ Today
 
 Salesforce CPQ is delivered as a managed package. That model made sense in 2016. It does not make sense in 2026, and here's why:
 
