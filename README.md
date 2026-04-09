@@ -2,6 +2,28 @@
 
 An MCP-driven CPQ solution for the Salesfoce platform. 
 
+# Please note: This is my 'scratch pad' that I update pretty regularly, but it's not structured and is not a formal spec. [Go here](./cpq_mcp_concept.md) for that document.
+
+## Usage
+
+Since this is currently only working in stdio, the only thing that has to happen is to configure the MCP server with your SF credentials. Please...use .env or similar. Free text in the wild is bad news.
+
+For reference, here is a working CPQ conversation initialed:
+
+![alt text](image.png)
+
+And look, we hit our first limitation (or opportunity, as it were):
+![alt text](image-1.png)
+
+## Coming Soon
+
+-Actual installation instructions
+
+-A tutorial of sorts to get the most out of qwoting through an agentic AI.
+
+-Server Side Events with just enough state to be interesting
+
+-Salesforce Agent integration
 
 ## Directory
 
@@ -36,7 +58,11 @@ To that end, this is also an 80% feature complete architecture. For this to hit 
 
 ## Overall Assessment
 
-One of the bugbears in software engineering that often gets overlooked is the shifting of commplexity from one aspect to another in service of subjective simplification. This approach makes that a non-issue,  as the LLM and reasoning moodel assume all complexity by their nature. It understands the loose relationships that products may have to dimensions present in the customer's specific context (how long they have been around, purchase history, any number of 'soft' qualifiers.) Over time, these things start to take a more concrete shape. There is no "we have to make a complex attribute driven data model to support the 10^20th number of possible configurations."
+One of the bugbears in software engineering that often gets overlooked is the shifting of commplexity from one aspect to another in service of subjective simplification.
+
+ This approach makes that a non-issue,  as the LLM and reasoning moodel assume all complexity by their nature. It understands the loose relationships that products may have to dimensions present in the customer's specific context (how long they have been around, purchase history, any number of 'soft' qualifiers.) 
+ 
+ Over time, these things start to take a more concrete shape. There is no "we have to make a complex attribute driven data model to support the 10^20th number of possible configurations."
 
 Justn Stroud
 
