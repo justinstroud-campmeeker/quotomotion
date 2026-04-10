@@ -2,6 +2,12 @@
 
 An MCP-driven CPQ solution for the Salesfoce platform. 
 
+## Utilities
+
+[Deep Stalker: Dependency Reporting](https://github.com/justinstroud-campmeeker) - Imminent 
+
+[Log Pilot](https://github.com/justinstroud-campmeeker) - Horizon
+
 ## Usage
 
 For reference, here is a working CPQ conversation within Claude Desktop:
