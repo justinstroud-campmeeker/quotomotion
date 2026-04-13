@@ -164,5 +164,5 @@ The skeleton code (see `cpq-mcp-server/`) demonstrates:
 
 **Runtime: Bun.** The server uses [Bun](https://bun.sh) as its JavaScript runtime — not Node. Bun loads `.env` natively (no dotenv dependency), runs TypeScript directly without a compile step, and has a substantially smaller attack surface. Start the server with `bun src/index.ts` or `bun --watch src/index.ts` for development.
 
-The remaining tools are stubbed with documented interfaces — sufficient to demonstrate the architecture and discuss the implementation path in a technical conversation.
+The remaining tools are stubbed with documented interfaces. They'll get fleshed out if there is interest in this solution.
 
