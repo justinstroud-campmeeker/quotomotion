@@ -1,10 +1,23 @@
 ## Quotomotion
 
-An MCP-driven CPQ solution for the Salesfoce platform. 
+An MCP-driven CPQ solution for the Salesfoce platform. This idea came to me during an interview recently, and it seemed to be an interesting use case.
 
-## Utilities
+## Documentation and Examples
 
-[Deep Stalker: Dependency Reporting](https://github.com/justinstroud-campmeeker) - Imminent 
+[Concept](./cpq_mcp_concept.md)
+
+[Overview](./cpq_mcp_architecture.svg)
+
+[Examples](./cpq_agent_conversation.md)
+
+
+## Implementation Note
+
+Currently this is a stdio-only server. Next big step is to bring it to SSEs and host it somewhere. Then tie AgentForce into it. For now, just picture an AgentForce mask on Claude Desktop.
+
+## Other MCP Utilities
+
+[Deep Stalker: Dependency Reporting](https://github.com/justinstroud-campmeeker/qutomotion) - Chugging Along
 
 [Log Pilot](https://github.com/justinstroud-campmeeker) - Horizon
 
@@ -22,11 +35,3 @@ So if we have an opp ID, we can really get going...
 <img width="747" height="615" alt="image" src="https://github.com/user-attachments/assets/72741ff3-9eb9-4ae9-9a4a-e2ad82e21c2b" />
 
 
-
-## Documentation and Examples
-
-[Concept](./cpq_mcp_concept.md)
-
-[Overview](./cpq_mcp_architecture.svg)
-
-[Examples](./cpq_agent_conversation.md)
