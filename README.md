@@ -17,7 +17,7 @@ Currently this is a stdio-only server. Next big step is to bring it to SSEs and 
 
 ## Other MCP Utilities
 
-[Deep Stalker: Dependency Reporting](https://github.com/justinstroud-campmeeker/qutomotion) - Chugging Along
+[Deep Stalker: Dependency Reporting](https://github.com/justinstroud-campmeeker/depstalk) - Chugging Along
 
 [Log Pilot](https://github.com/justinstroud-campmeeker) - Horizon
 
